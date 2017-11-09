@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyHealth : MonoBehaviour {
+public class playerHealth : MonoBehaviour {
 
     public float hp = 5;
 
     // Use this for initialization
-    void Start ()
-    {
-        
+    void Start () {
+		
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-	    if (hp <= 0)
+        if (hp <= 0)
         {
             Destroy(gameObject);
         }
-	}
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -27,6 +26,10 @@ public class enemyHealth : MonoBehaviour {
         if (col.CompareTag("Bullet"))
         {
             hp--;
+        }
+        if (col.CompareTag("Child"))
+        {
+            Destroy(gameObject);
         }
     }
 }

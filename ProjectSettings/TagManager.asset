@@ -25,6 +25,7 @@ TagManager:
   - Bullet
   - KillerWall
   - Enemy
+  - Child
   layers:
   - Default
   - TransparentFX
