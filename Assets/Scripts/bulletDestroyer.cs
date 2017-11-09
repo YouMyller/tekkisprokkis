@@ -25,7 +25,7 @@ public class bulletDestroyer : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col)
     {
         //debug = true;
-        if (col.CompareTag("KillerWall") || col.CompareTag("Enemy") || col.CompareTag("Player"))
+        if (col.CompareTag("KillerWall") || col.CompareTag("Enemy") || col.CompareTag("Player") || col.CompareTag("Child"))
         {
             Destroy(gameObject);
         }
