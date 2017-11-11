@@ -6,14 +6,44 @@ public class playerHealth : MonoBehaviour {
 
     public float hp = 5;
 
+    private bool flashActive = false;
+
+    public float flashLength;
+    private float flashCounter;
+
+    public SpriteRenderer playerSprite;
+
     // Use this for initialization
-    void Start () {
-		
+    void Start ()
+    {
+        playerSprite = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (flashActive)
+        {
+            if (flashCounter > flashLength * .66f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            }
+            else if (flashCounter > flashLength * .33f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+            }
+            else if (flashCounter > 0f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            }
+            else
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+                flashActive = false;
+            }
+        }
+        flashCounter -= Time.deltaTime;
+
         if (hp <= 0)
         {
             Destroy(gameObject);
@@ -26,6 +56,8 @@ public class playerHealth : MonoBehaviour {
         if (col.CompareTag("Bullet"))
         {
             hp--;
+            flashActive = true;
+            flashCounter = flashLength;
         }
         if (col.CompareTag("Child"))
         {
