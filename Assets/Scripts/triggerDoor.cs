@@ -5,6 +5,8 @@ using UnityEngine;
 public class triggerDoor : MonoBehaviour {
 
     public GameObject triggerObject;
+    public GameObject enemyGroup;
+
     public float speed = .1f;
     public float moveTime = 1f;
     //public int moveup, movedown, moveright, moveleft;
@@ -19,6 +21,7 @@ public class triggerDoor : MonoBehaviour {
     {
 	    if (!triggerObject.active)
         {
+            enemyGroup.SetActive(true);
             moveTime -= Time.deltaTime;
             if (moveTime >= 0)
             {

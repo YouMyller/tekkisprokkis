@@ -6,7 +6,7 @@ public class playerHealth : MonoBehaviour {
 
     public float hp = 5;
 
-    private bool flashActive = false;
+    public bool flashActive = false;
 
     public float flashLength;
     private float flashCounter;

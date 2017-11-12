@@ -357,7 +357,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 99170624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.726239, y: 3.738644, z: 0.82880354}
+  m_LocalPosition: {x: 17.92, y: -2.49, z: 0.82880354}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 299263058}
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!114 &212886407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,6 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 0
+  speed: 0
   thisObject: {fileID: 212886414}
   target: {fileID: 818024263}
 --- !u!195 &212886408
@@ -615,7 +616,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -865,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &232187817
 Rigidbody2D:
   serializedVersion: 4
@@ -1039,7 +1040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!114 &232783179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,6 +1053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 0
+  speed: 0
   thisObject: {fileID: 232783186}
   target: {fileID: 818024263}
 --- !u!195 &232783180
@@ -1063,7 +1065,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1163,7 +1165,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 232783176}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 13.706239, y: 0.5113561, z: 0.07119644}
+  m_LocalPosition: {x: 5.3199997, y: -1.98, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1478659452}
@@ -1467,7 +1469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!114 &357090482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1480,6 +1482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 0
+  speed: 0
   thisObject: {fileID: 357090489}
   target: {fileID: 818024263}
 --- !u!195 &357090483
@@ -1491,7 +1494,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1591,7 +1594,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357090479}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 19.32624, y: -1.2386439, z: 0.07119644}
+  m_LocalPosition: {x: -1.12, y: -2.71, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1506658857}
@@ -1839,7 +1842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!114 &462625033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1852,6 +1855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 0
+  speed: 0
   thisObject: {fileID: 462625040}
   target: {fileID: 818024263}
 --- !u!195 &462625034
@@ -1863,7 +1867,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1963,7 +1967,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462625030}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 9.306239, y: -0.008643866, z: 0.07119644}
+  m_LocalPosition: {x: 0.9200003, y: -2.5, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1803216483}
@@ -3937,6 +3941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  flashActive: 0
   flashLength: 0.4
   playerSprite: {fileID: 818024262}
 --- !u!114 &818024257
@@ -4175,6 +4180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 0
+  speed: 0
   thisObject: {fileID: 832203883}
   target: {fileID: 818024263}
 --- !u!23 &832203880
@@ -4954,7 +4960,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: cda1c7725846440408fdf8a16e30ea7a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8c4d265d55389bc4e820245522553a87, type: 2}
 --- !u!23 &1250529585
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5016,7 +5022,7 @@ Transform:
   m_GameObject: {fileID: 1250529583}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 2.16, y: -2.09, z: 2.8}
-  m_LocalScale: {x: 25.097162, y: 2.4512765, z: 14.715146}
+  m_LocalScale: {x: 45.174892, y: 2.4512765, z: 14.715146}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -5287,7 +5293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!50 &1339896209
 Rigidbody2D:
   serializedVersion: 4
@@ -5780,7 +5786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!50 &1461560587
 Rigidbody2D:
   serializedVersion: 4
@@ -5915,7 +5921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!50 &1478659455
 Rigidbody2D:
   serializedVersion: 4
@@ -6028,7 +6034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!114 &1480478758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6041,6 +6047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 0
+  speed: 0
   thisObject: {fileID: 1480478765}
   target: {fileID: 818024263}
 --- !u!195 &1480478759
@@ -6052,7 +6059,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -6276,7 +6283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!50 &1506658860
 Rigidbody2D:
   serializedVersion: 4
@@ -6488,7 +6495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!114 &1534780499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6501,6 +6508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 0
+  speed: 0
   thisObject: {fileID: 1534780506}
   target: {fileID: 818024263}
 --- !u!195 &1534780500
@@ -6512,7 +6520,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -6612,7 +6620,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1534780496}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 11.456239, y: 0.26135612, z: 0.07119644}
+  m_LocalPosition: {x: 3.07, y: -2.23, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1737441452}
@@ -6650,6 +6658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObject: {fileID: 232187816}
+  enemyGroup: {fileID: 99170624}
   speed: 0.1
   moveTime: 1
 --- !u!23 &1539652407
@@ -7213,7 +7222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!50 &1737441455
 Rigidbody2D:
   serializedVersion: 4
@@ -7761,7 +7770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!50 &1803216486
 Rigidbody2D:
   serializedVersion: 4
@@ -7968,6 +7977,7 @@ GameObject:
   - component: {fileID: 1831164019}
   - component: {fileID: 1831164022}
   - component: {fileID: 1831164021}
+  - component: {fileID: 1831164020}
   m_Layer: 0
   m_Name: RotatePart
   m_TagString: Player
@@ -7989,6 +7999,19 @@ Transform:
   m_Father: {fileID: 818024263}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1831164020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831164018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e03f48843705ce41b0e48f4a86e1432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashLength: 0.4
+  childSprite: {fileID: 1831164022}
 --- !u!114 &1831164021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8341,7 +8364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!114 &1942782284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8354,6 +8377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceAway: 0
+  speed: 0
   thisObject: {fileID: 1942782291}
   target: {fileID: 818024263}
 --- !u!195 &1942782285
@@ -8365,7 +8389,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -8764,7 +8788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   flashLength: 0
-  playerSprite: {fileID: 0}
+  enemySprite: {fileID: 0}
 --- !u!50 &2127123444
 Rigidbody2D:
   serializedVersion: 4

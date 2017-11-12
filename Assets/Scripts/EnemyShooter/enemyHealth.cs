@@ -11,7 +11,7 @@ public class enemyHealth : MonoBehaviour {
     public float flashLength;
     private float flashCounter;
 
-    public SpriteRenderer playerSprite;
+    public SpriteRenderer enemySprite;
 
     // Use this for initialization
     void Start ()
@@ -22,31 +22,32 @@ public class enemyHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (flashActive)
-        {
-            if (flashCounter > flashLength * .66f)
-            {
-                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
-            }
-            else if (flashCounter > flashLength * .33f)
-            {
-                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
-            }
-            else if (flashCounter > 0f)
-            {
-                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
-            }
-            else
-            {
-                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
-                flashActive = false;
-            }
-        }
-        flashCounter -= Time.deltaTime;
         if (hp <= 0)
         {
             Destroy(gameObject);
         }
+
+        if (flashActive)
+        {
+            if (flashCounter > flashLength * .66f)
+            {
+                enemySprite.color = new Color(enemySprite.color.r, enemySprite.color.g, enemySprite.color.b, 0f);
+            }
+            else if (flashCounter > flashLength * .33f)
+            {
+                enemySprite.color = new Color(enemySprite.color.r, enemySprite.color.g, enemySprite.color.b, 1f);
+            }
+            else if (flashCounter > 0f)
+            {
+                enemySprite.color = new Color(enemySprite.color.r, enemySprite.color.g, enemySprite.color.b, 0f);
+            }
+            else
+            {
+                enemySprite.color = new Color(enemySprite.color.r, enemySprite.color.g, enemySprite.color.b, 1f);
+                flashActive = false;
+            }
+        }
+        flashCounter -= Time.deltaTime;
 	}
 
     void OnTriggerEnter2D(Collider2D col)

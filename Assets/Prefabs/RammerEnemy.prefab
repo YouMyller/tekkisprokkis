@@ -193,7 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c202abd768c454db1af54ae46ac749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceAway: 0
+  distanceAway: 1
+  speed: 0
   thisObject: {fileID: 4491976125373518}
   target: {fileID: 0}
 --- !u!114 &114625749043232732
@@ -208,6 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  flashLength: 0
+  enemySprite: {fileID: 0}
 --- !u!114 &114809241205533556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,6 +223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  flashLength: 0
+  enemySprite: {fileID: 0}
 --- !u!114 &114883739930663174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,7 +270,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

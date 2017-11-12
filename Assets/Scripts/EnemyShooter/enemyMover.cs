@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class enemyMover : MonoBehaviour {
 
     public float distanceAway;
+    public float speed;
+
     public Transform thisObject;
     public Transform target;
     //private NavMeshSurfaceAgentTests navComponent;

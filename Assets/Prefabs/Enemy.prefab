@@ -206,6 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  flashLength: 0.4
+  enemySprite: {fileID: 212750246435229704}
 --- !u!114 &114429020132551440
 MonoBehaviour:
   m_ObjectHideFlags: 1
