@@ -19,7 +19,12 @@ public class EnemyBackNForthPatrol : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update ()
+
     {
+        if (currentWP >= (Waypoints.Length-1))
+        {
+            goBack = true;
+        }
         if (transform.position == Waypoints[currentWP].position)
         {
             if (goBack)
@@ -27,10 +32,7 @@ public class EnemyBackNForthPatrol : MonoBehaviour {
             else
                 currentWP++;
         }
-        if (currentWP >= Waypoints.Length)
-        {
-            currentWP = 0;
-        }
+
         else if(currentWP == 0)
         {
             goBack = false;
