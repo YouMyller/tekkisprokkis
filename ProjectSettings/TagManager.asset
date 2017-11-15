@@ -26,6 +26,10 @@ TagManager:
   - KillerWall
   - Enemy
   - Child
+  - UpDownLeft Rail
+  - UpLeftRight Rail
+  - UpDownRight Rail
+  - DownRightLeft Rail
   layers:
   - Default
   - TransparentFX

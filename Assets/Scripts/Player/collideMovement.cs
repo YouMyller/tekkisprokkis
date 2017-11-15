@@ -80,6 +80,22 @@ public class collideMovement : MonoBehaviour {
         {
             MoveDownRight();
         }
+        else if (col.gameObject.CompareTag("UpDownLeft Rail"))
+        {
+            MoveUpDownLeft();
+        }
+        else if (col.gameObject.CompareTag("UpLeftRight Rail"))
+        {
+            MoveUpLeftRight();
+        }
+        else if (col.gameObject.CompareTag("UpDownRight Rail"))
+        {
+            MoveUpDownRight();
+        }
+        else if (col.gameObject.CompareTag("DownRightLeft Rail"))
+        {
+            MoveDownRightLeft();
+        }
     }
 
     void MoveUpDown()
@@ -210,6 +226,80 @@ public class collideMovement : MonoBehaviour {
         {
             move = new Vector2(move.x, Input.GetAxisRaw("Vertical"));
             moveVelocity = move * moveSpeed;
+        }
+    }
+    void MoveUpDownLeft()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            move = new Vector2(move.x, Input.GetAxisRaw("Vertical"));
+            moveVelocity = move * moveSpeed;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            move = new Vector2(Input.GetAxisRaw("Horizontal"), move.y);
+            moveVelocity = move * moveSpeed;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            move = new Vector2(0, 0);
+            moveVelocity = new Vector2(0, 0);
+            myRigidBody.velocity = Vector2.zero;
+        }
+    }
+    void MoveUpLeftRight()
+    {
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            move = new Vector2(Input.GetAxisRaw("Horizontal"), move.y);
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            move = new Vector2(0, Input.GetAxisRaw("Vertical"));
+            moveVelocity = move * moveSpeed;
+        }
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            move = new Vector2(0, 0);
+            moveVelocity = new Vector2(0, 0);
+            myRigidBody.velocity = Vector2.zero;
+        }
+    }
+    void MoveUpDownRight()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            move = new Vector2(move.x, Input.GetAxisRaw("Vertical"));
+            moveVelocity = move * moveSpeed;
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            move = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
+            moveVelocity = move * moveSpeed;
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            move = new Vector2(0, 0);
+            moveVelocity = new Vector2(0, 0);
+            myRigidBody.velocity = Vector2.zero;
+        }
+    }
+    void MoveDownRightLeft()
+    {
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            move = new Vector2(Input.GetAxisRaw("Horizontal"), move.y);
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            move = new Vector2(move.x, Input.GetAxisRaw("Vertical"));
+            moveVelocity = move * moveSpeed;
+        }
+        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A))
+        {
+            move = new Vector2(0, 0);
+            moveVelocity = new Vector2(0, 0);
+            myRigidBody.velocity = Vector2.zero;
         }
     }
 }
