@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RaycastTest : MonoBehaviour
 {
-
+    /*
     // Use this for initialization
     void Start()
     {
@@ -28,5 +28,5 @@ public class RaycastTest : MonoBehaviour
         {
             print("There is something in front of the object!");
         }
-    }
+    }*/
 }
