@@ -9,12 +9,12 @@ public class RaycastTest : MonoBehaviour
     private Ray Sight;
     public float damping;
 
-    private bool detected;
+    private Rigidbody myRigidBody;
 
     // Use this for initialization
     void Start()
     {
-
+        myRigidBody = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
@@ -27,11 +27,15 @@ public class RaycastTest : MonoBehaviour
 
         if (distance < aggroRange)
         {
-            Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
+            /* Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position);
+             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);*/
+            Vector2 direction = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, damping * Time.deltaTime);
             if (Physics.Raycast(Sight, out hit, aggroRange))
             {
-                Debug.DrawRay(Sight.origin, transform.forward * aggroRange, Color.red);
+                Debug.DrawRay(Sight.origin, transform.right * aggroRange, Color.red);
                 if (hit.collider.tag == "Player")
                 {
                     print("Pew!");
