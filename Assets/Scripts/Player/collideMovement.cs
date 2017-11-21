@@ -48,7 +48,7 @@ public class collideMovement : MonoBehaviour {
         {
             MoveFourDirections();
         }
-        else if (col.gameObject.CompareTag("RightOnly Rail"))
+        /*else if (col.gameObject.CompareTag("RightOnly Rail"))
         {
             MoveRightOnly();
         }
@@ -95,7 +95,7 @@ public class collideMovement : MonoBehaviour {
         else if (col.gameObject.CompareTag("DownRightLeft Rail"))
         {
             MoveDownRightLeft();
-        }
+        }*/
     }
 
     void MoveUpDown()
@@ -120,7 +120,8 @@ public class collideMovement : MonoBehaviour {
         //myRigidBody.constraints = RigidbodyConstraints2D.None;
         moveVelocity = move * moveSpeed;
     }
-    void MoveRightOnly()
+
+    /*void MoveRightOnly()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
@@ -302,4 +303,5 @@ public class collideMovement : MonoBehaviour {
             myRigidBody.velocity = Vector2.zero;
         }
     }
+    */
 }
