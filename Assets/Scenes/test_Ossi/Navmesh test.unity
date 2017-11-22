@@ -549,7 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1980437328}
   aggroRange: 5
-  damping: 10
+  damping: 30
 --- !u!23 &550365149
 MeshRenderer:
   m_ObjectHideFlags: 0

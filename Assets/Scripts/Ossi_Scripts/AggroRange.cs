@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RaycastTest : MonoBehaviour
+public class AggroRange : MonoBehaviour
 {
     public GameObject player;
     public float aggroRange;
@@ -20,7 +20,7 @@ public class RaycastTest : MonoBehaviour
     void FixedUpdate()
     {
         Sight.origin = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        Sight.direction = transform.forward;
+        Sight.direction = transform.right;
         RaycastHit hit;
         float distance = Vector3.Distance(transform.position, player.transform.position);
         Vector3 fwd = transform.TransformDirection(Vector3.right);
