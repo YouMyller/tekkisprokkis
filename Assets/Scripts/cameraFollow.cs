@@ -43,7 +43,7 @@ public class cameraFollow : MonoBehaviour {
 
         //Vector2 focuspositionTwo = focusArea.centre + Vector2.right * horizontalOffset;
 
-        transform.position = (Vector3)focusPosition + Vector3.forward * -10;
+        transform.position = (Vector3)(focusPosition) + Vector3.forward * -10;  //+ focuspositionTwo
 
         /*waitTime -= Time.deltaTime;
 
