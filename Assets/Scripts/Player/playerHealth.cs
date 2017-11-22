@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerHealth : MonoBehaviour {
 
-    public float hp = 5;
+    //public Sprite[] HealthSprites;
+
+    //public Image HeartUI;
+
+    public GameObject h1, h2, h3, h4, h5;
+
+    public int hp = 5;
 
     public bool flashActive = false;
 
@@ -22,6 +29,29 @@ public class playerHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        //HeartUI.sprite = HealthSprites[hp];
+
+        if (hp == 4)
+        {
+            h5.SetActive(false);
+        }
+        if (hp == 3)
+        {
+            h4.SetActive(false);
+        }
+        if (hp == 2)
+        {
+            h3.SetActive(false);
+        }
+        if (hp == 1)
+        {
+            h2.SetActive(false);
+        }
+        if (hp == 0)
+        {
+            h1.SetActive(false);
+        }
+
         if (flashActive)
         {
             if (flashCounter > flashLength * .66f)
