@@ -21,7 +21,7 @@ public class AggroRange : MonoBehaviour
 
     void FixedUpdate()
     {
-        Sight.origin = new Vector2(transform.position.x, transform.position.y);
+        Sight.origin = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Sight.direction = transform.right;
         RaycastHit hit;
         float distance = Vector2.Distance(transform.position, player.transform.position);
