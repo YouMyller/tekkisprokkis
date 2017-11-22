@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour {
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 5.0f;
         var y = Input.GetAxis("Vertical") * Time.deltaTime * 5.0f;
 
-        transform.Translate(0, 0, -y);
+        transform.Translate(0, y, 0);
         transform.Translate(x, 0, 0);
     }
 }
