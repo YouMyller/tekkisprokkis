@@ -34,9 +34,10 @@ public class AggroRange : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, damping * Time.deltaTime);
+            Debug.DrawRay(Sight.origin, transform.right * aggroRange, Color.red);
             if (Physics.Raycast(Sight, out hit, aggroRange))
             {
-                Debug.DrawRay(Sight.origin, transform.right * aggroRange, Color.red);
+               // Debug.DrawRay(Sight.origin, transform.right * aggroRange, Color.red);
                // print(hit.collider.tag);
                 if (hit.collider.tag == "Player")
                 {
