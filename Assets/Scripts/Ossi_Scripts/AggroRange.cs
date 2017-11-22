@@ -5,10 +5,12 @@ using UnityEngine;
 public class AggroRange : MonoBehaviour
 {
     public GameObject player;
+    public GameObject bulletSpawn;
     public float aggroRange;
     private Ray Sight;
     public float damping;
 
+    private float burstWait = 1.5f;
     private Rigidbody myRigidBody;
 
     // Use this for initialization
@@ -35,11 +37,26 @@ public class AggroRange : MonoBehaviour
             if (Physics.Raycast(Sight, out hit, aggroRange))
             {
                 Debug.DrawRay(Sight.origin, transform.right * aggroRange, Color.red);
+               // print(hit.collider.tag);
                 if (hit.collider.tag == "Player")
                 {
-                    print("Pew!");
+                    bulletSpawn.GetComponent<enemyShooting>().enabled = true;
+                }
+                else
+                {
+                    burstWait -= Time.deltaTime;
+                    if (burstWait < 0)
+                    {
+                        bulletSpawn.GetComponent<enemyShooting>().enabled = false;
+                        burstWait = 1.5f;
+                    }
                 }
             }
+        }
+        else
+        {
+            bulletSpawn.GetComponent<enemyShooting>().enabled = false;
+
         }
     }
 
