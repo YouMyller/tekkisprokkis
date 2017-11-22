@@ -19,11 +19,10 @@ public class AggroRange : MonoBehaviour
 
     void FixedUpdate()
     {
-        Sight.origin = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Sight.origin = new Vector2(transform.position.x, transform.position.y);
         Sight.direction = transform.right;
         RaycastHit hit;
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-        Vector3 fwd = transform.TransformDirection(Vector3.right);
+        float distance = Vector2.Distance(transform.position, player.transform.position);
 
         if (distance < aggroRange)
         {
