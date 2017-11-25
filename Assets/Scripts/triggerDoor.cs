@@ -11,17 +11,21 @@ public class triggerDoor : MonoBehaviour {
     public float moveTime = 1f;
     //public int moveup, movedown, moveright, moveleft;
 
+    private Rigidbody rb;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+	    rb = GetComponent<Rigidbody>();	
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-	    if (!triggerObject.active)
+	    if (!triggerObject.activeInHierarchy)
         {
-            enemyGroup.SetActive(true);
+            Debug.Log("Oh help me world! I'm moving so fast!");
+            //enemyGroup.SetActive(true);
             moveTime -= Time.deltaTime;
             if (moveTime >= 0)
             {
@@ -29,7 +33,9 @@ public class triggerDoor : MonoBehaviour {
             }
             if (moveTime <= 0)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                speed = 0f;
+                rb.isKinematic = true;
             }
         }
 	}

@@ -30,6 +30,7 @@ TagManager:
   - UpLeftRight Rail
   - UpDownRight Rail
   - DownRightLeft Rail
+  - LevelSwitcher
   layers:
   - Default
   - TransparentFX
