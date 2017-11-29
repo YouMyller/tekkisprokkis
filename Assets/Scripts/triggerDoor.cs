@@ -24,7 +24,6 @@ public class triggerDoor : MonoBehaviour {
     {
 	    if (!triggerObject.activeInHierarchy)
         {
-            Debug.Log("Oh help me world! I'm moving so fast!");
             //enemyGroup.SetActive(true);
             moveTime -= Time.deltaTime;
             if (moveTime >= 0)
