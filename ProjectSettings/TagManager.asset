@@ -31,6 +31,10 @@ TagManager:
   - UpDownRight Rail
   - DownRightLeft Rail
   - LevelSwitcher
+  - MenuStart
+  - MenuCredits
+  - MenuExit
+  - MenuBackToMenu
   layers:
   - Default
   - TransparentFX

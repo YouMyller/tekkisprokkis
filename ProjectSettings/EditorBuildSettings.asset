@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/proto_scene.unity
     guid: fcf69ec17930b9e48a4afc1959913c6f
+  - enabled: 1
+    path: Assets/Scenes/test_Ossi/Credits.unity
+    guid: 3fe2053e06ec5c142a5c3fff85f38dfe
+  - enabled: 1
+    path: Assets/Scenes/test_Ossi/MainMenu.unity
+    guid: c20a7bf819849a04eb3736e7904d51b2
