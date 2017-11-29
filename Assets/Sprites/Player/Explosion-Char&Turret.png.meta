@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fea50ccda778a41419eaf433a548515d
-timeCreated: 1511955260
+timeCreated: 1511961828
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -329,6 +329,20 @@ TextureImporter:
         y: 0
         width: 640
         height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Explosion-Char&Turret_14
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 0
+        width: 636
+        height: 639
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

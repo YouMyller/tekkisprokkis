@@ -13,6 +13,8 @@ public class enemyHealth : MonoBehaviour {
 
     public SpriteRenderer enemySprite;
 
+    public Transform Explosion;
+
     // Use this for initialization
     void Start ()
     {
@@ -24,6 +26,7 @@ public class enemyHealth : MonoBehaviour {
     {
         if (hp <= 0)
         {
+            Instantiate(Explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
 
