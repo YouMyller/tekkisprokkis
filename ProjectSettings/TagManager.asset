@@ -35,6 +35,8 @@ TagManager:
   - MenuCredits
   - MenuExit
   - MenuBackToMenu
+  - MenuLvl1
+  - MenuLvl2
   layers:
   - Default
   - TransparentFX

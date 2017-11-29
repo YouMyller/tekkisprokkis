@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/test_Ossi/MainMenu.unity
     guid: c20a7bf819849a04eb3736e7904d51b2
+  - enabled: 1
+    path: Assets/Scenes/test_Ossi/LevelSelect.unity
+    guid: 82036c39c7ca5304c874b22b543b4cf2

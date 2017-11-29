@@ -13,13 +13,14 @@ public class MainMenu : MonoBehaviour {
     {
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
+
     }
-    
+
     void OnClick()
     {
         if (tag == "MenuStart")
         {
-            print("Let the games BEGIN!");
+            SceneManager.LoadScene("LevelSelect");
         }
 
         else if (tag == "MenuCredits")
@@ -35,6 +36,16 @@ public class MainMenu : MonoBehaviour {
         else if (tag == "MenuBackToMenu")
         {
             SceneManager.LoadScene("MainMenu");
+        }
+
+        else if (tag == "MenuLvl1")
+        {
+            print("lvl1");
+        }
+
+        else if (tag == "MenuLvl2")
+        {
+            print("lvl2");
         }
     }
 	
