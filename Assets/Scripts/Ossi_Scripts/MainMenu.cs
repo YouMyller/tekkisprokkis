@@ -1,36 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
-    public bool isStart;
-    public bool isCredits;
-    public bool isExit;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-    
-	
-	// Update is called once per frame
-	void Update ()
+    public Button yourButton;
+
+    // Use this for initialization
+    void Start()
     {
-
-        if(Input.GetMouseButtonUp(0))
+        Button btn = yourButton.GetComponent<Button>();
+        btn.onClick.AddListener(OnClick);
+    }
+    
+    void OnClick()
+    {
+        if (tag == "MenuStart")
         {
-            if (isStart)
-            {
-                print("Start the game! Yay!");
-            }
-            if (isCredits)
-            {
-                print("We made this game!");
-            }
-            if (isExit)
-            {
-                print("Please don't go :(");
-            }
+            print("Let the games BEGIN!");
+        }
+
+        else if (tag == "MenuCredits")
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
+        else if (tag == "MenuExit")
+        {
+            print("There is no escape!");
+        }
+
+        else if (tag == "MenuBackToMenu")
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
+	
 }
