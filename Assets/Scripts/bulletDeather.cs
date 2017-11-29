@@ -6,8 +6,14 @@ public class bulletDeather : MonoBehaviour {
 
     public int hp = 3;
 
-	// Use this for initialization
-	void Start () {
+    SpriteRenderer sr;
+
+    public Sprite dead;
+
+    public Transform Explosion;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -16,6 +22,11 @@ public class bulletDeather : MonoBehaviour {
     {
 	    if (hp <= 0)
         {
+            //if (!Explosion.activeInHie)          TEE TÄMÄ
+            {
+                Instantiate(Explosion, transform.position, transform.rotation);
+            }
+            sr.sprite = dead;
             gameObject.SetActive(false);
         }
 	}

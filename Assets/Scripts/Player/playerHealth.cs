@@ -20,6 +20,8 @@ public class playerHealth : MonoBehaviour {
 
     public SpriteRenderer playerSprite;
 
+    public Transform Explosion;
+
     // Use this for initialization
     void Start ()
     {
@@ -76,6 +78,7 @@ public class playerHealth : MonoBehaviour {
 
         if (hp <= 0)
         {
+            Instantiate(Explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
