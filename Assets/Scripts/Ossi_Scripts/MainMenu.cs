@@ -18,32 +18,32 @@ public class MainMenu : MonoBehaviour {
 
     void OnClick()
     {
-        if (tag == "MenuStart")
+        if (name == "Start")
         {
             SceneManager.LoadScene("LevelSelect");
         }
 
-        else if (tag == "MenuCredits")
+        else if (name == "Credits")
         {
             SceneManager.LoadScene("Credits");
         }
 
-        else if (tag == "MenuExit")
+        else if (name == "Exit")
         {
             print("There is no escape!");
         }
 
-        else if (tag == "MenuBackToMenu")
+        else if (name == "Back")
         {
             SceneManager.LoadScene("MainMenu");
         }
 
-        else if (tag == "MenuLvl1")
+        else if (name == "lvl1")
         {
             print("lvl1");
         }
 
-        else if (tag == "MenuLvl2")
+        else if (name == "lvl2")
         {
             print("lvl2");
         }
