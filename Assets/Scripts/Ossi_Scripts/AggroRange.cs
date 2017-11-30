@@ -49,7 +49,7 @@ public class AggroRange : MonoBehaviour
                     if (burstWait < 0)
                     {
                         bulletSpawn.GetComponent<enemyShooting>().enabled = false;
-                        burstWait = 1.5f;
+                        burstWait = 1f;
                     }
                 }
             }

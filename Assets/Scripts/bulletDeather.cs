@@ -12,6 +12,10 @@ public class bulletDeather : MonoBehaviour {
 
     public Transform Explosion;
 
+    public GameObject Parent;
+
+    public float timeToExplode = .1f;
+
     // Use this for initialization
     void Start () {
 		
@@ -22,18 +26,17 @@ public class bulletDeather : MonoBehaviour {
     {
 	    if (hp <= 0)
         {
-            //if (!Explosion.activeInHie)          TEE TÄMÄ
+            if (Parent.activeInHierarchy == true)
             {
                 Instantiate(Explosion, transform.position, transform.rotation);
             }
-            sr.sprite = dead;
-            gameObject.SetActive(false);
+            Parent.SetActive(false);
+            //Changing the sprite 
         }
 	}
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        //debug = true;
         if (col.CompareTag("Bullet"))
         {
             hp--;
