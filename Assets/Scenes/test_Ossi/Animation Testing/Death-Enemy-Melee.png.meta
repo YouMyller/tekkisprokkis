@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 54f30a372d31b934aa66f0dc255766c8
-timeCreated: 1512046305
+guid: a8518ab52934d5047abec69e1a7f4996
+timeCreated: 1512049100
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Enemy-Melee-Shirtless2.0_0
-    21300002: Enemy-Melee-Shirtless2.0_1
-    21300004: Enemy-Melee-Shirtless2.0_2
-    21300006: Enemy-Melee-Shirtless2.0_3
-    21300008: Enemy-Melee-Shirtless2.0_4
+    21300000: Death-Enemy-Melee_0
+    21300002: Death-Enemy-Melee_1
+    21300004: Death-Enemy-Melee_2
+    21300006: Death-Enemy-Melee_3
+    21300008: Death-Enemy-Melee_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -83,7 +83,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy-Melee-Shirtless2.0_0
+      name: Death-Enemy-Melee_0
       rect:
         serializedVersion: 2
         x: 0
@@ -97,7 +97,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Enemy-Melee-Shirtless2.0_1
+      name: Death-Enemy-Melee_1
       rect:
         serializedVersion: 2
         x: 640
@@ -111,7 +111,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Enemy-Melee-Shirtless2.0_2
+      name: Death-Enemy-Melee_2
       rect:
         serializedVersion: 2
         x: 0
@@ -125,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Enemy-Melee-Shirtless2.0_3
+      name: Death-Enemy-Melee_3
       rect:
         serializedVersion: 2
         x: 640
@@ -139,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Enemy-Melee-Shirtless2.0_4
+      name: Death-Enemy-Melee_4
       rect:
         serializedVersion: 2
         x: 0
