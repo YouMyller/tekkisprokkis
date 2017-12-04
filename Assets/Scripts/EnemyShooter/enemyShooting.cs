@@ -8,6 +8,8 @@ public class enemyShooting : MonoBehaviour {
 
     public Bullet bullet;
 
+    public AudioSource firingEffect;
+
     public float shotCounterWait = 3f;
     public float shotCounterUnleash = .2f;
 
@@ -28,6 +30,7 @@ public class enemyShooting : MonoBehaviour {
             shotCounterUnleash -= Time.deltaTime;
             if (shotCounterUnleash <= 0)
             {
+                firingEffect.Play();
                 Bullet newBullet = Instantiate(bullet, bulletSpawner.position, bulletSpawner.rotation) as Bullet;
                 shotCounterUnleash = .2f;
             }

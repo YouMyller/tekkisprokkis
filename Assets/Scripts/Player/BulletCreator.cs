@@ -8,6 +8,8 @@ public class BulletCreator : MonoBehaviour {
 
     public Bullet bullet;
 
+    public AudioSource firingEffect;
+
     //public float bulletSpeed;
     public float timeBetweenShots;
     private float shotCounter = .2f;
@@ -29,6 +31,7 @@ public class BulletCreator : MonoBehaviour {
             {
                 shotCounter = .2f;
                 Bullet newBullet = Instantiate(bullet, bulletSpawner.position, bulletSpawner.rotation) as Bullet;
+                firingEffect.Play();
             }
          /*   else
             {
