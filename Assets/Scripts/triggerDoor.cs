@@ -36,6 +36,7 @@ public class triggerDoor : MonoBehaviour {
                 speed = 0f;
                 rb.isKinematic = true;
             }
+            enemyGroup.SetActive(true);
         }
 	}
 }
