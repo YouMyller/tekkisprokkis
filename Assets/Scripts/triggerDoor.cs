@@ -22,21 +22,28 @@ public class triggerDoor : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-	    if (!triggerObject.activeInHierarchy)
+        if (!triggerObject.activeInHierarchy || !triggerObject)
         {
-            //enemyGroup.SetActive(true);
-            moveTime -= Time.deltaTime;
-            if (moveTime >= 0)
+            //Debug.Log("Hui");
+            if (enemyGroup.activeInHierarchy == true) //(enemyGroup.GetComponent<enemyMover>().enabled == false) //jotain lisää ehtoja
             {
-                transform.Translate(Vector2.up * speed);
+                Debug.Log("Jotain täennkin");
+                //enemyGroup.SetActive(true);
+                moveTime -= Time.deltaTime;
+                if (moveTime > 0)
+                {
+                    Debug.Log("Liikkuminen");
+                    transform.Translate(Vector2.up * speed);
+                }
+                if (moveTime < 0)
+                {
+                    //Destroy(gameObject);
+                    speed = 0f;
+                    rb.isKinematic = true;
+                    Debug.Log("höhö");
+                    enemyGroup.GetComponent<enemyMover>().enabled = true;
+                }
             }
-            if (moveTime <= 0)
-            {
-                //Destroy(gameObject);
-                speed = 0f;
-                rb.isKinematic = true;
-            }
-            enemyGroup.SetActive(true);
         }
 	}
 }
