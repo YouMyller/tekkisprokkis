@@ -7,6 +7,8 @@ public class triggerDoor : MonoBehaviour {
     public GameObject triggerObject;
     public GameObject enemyGroup;
 
+    public float spawnTimer = 1f;
+
     public float speed = .1f;
     public float moveTime = 1f;
     //public int moveup, movedown, moveright, moveleft;
@@ -22,21 +24,31 @@ public class triggerDoor : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-	    if (!triggerObject.activeInHierarchy)
+        if (!triggerObject.activeInHierarchy || !triggerObject)
         {
+            spawnTimer -= Time.deltaTime;
+            //Debug.Log("Hui");
+            //if (enemyGroup.activeInHierarchy == true) //(enemyGroup.GetComponent<enemyMover>().enabled == false) //jotain lisää ehtoja
+            Debug.Log("Jotain täennkin");
             //enemyGroup.SetActive(true);
             moveTime -= Time.deltaTime;
-            if (moveTime >= 0)
+            if (moveTime > 0)
             {
+                Debug.Log("Liikkuminen");
                 transform.Translate(Vector2.up * speed);
             }
-            if (moveTime <= 0)
+            if (moveTime < 0)
             {
                 //Destroy(gameObject);
                 speed = 0f;
                 rb.isKinematic = true;
+                Debug.Log("höhö");
+                
             }
-            enemyGroup.SetActive(true);
+            if (spawnTimer <= 0)
+            {
+                enemyGroup.GetComponent<enemyMover>().enabled = true;
+            }
         }
 	}
 }

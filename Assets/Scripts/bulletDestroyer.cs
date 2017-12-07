@@ -6,6 +6,9 @@ public class bulletDestroyer : MonoBehaviour {
 
     private float destTime = 3;
 
+    public AudioSource metalHit;
+    public AudioSource fleshHit;
+
     // Use this for initialization
     void Start () {
 		
@@ -18,6 +21,7 @@ public class bulletDestroyer : MonoBehaviour {
 
         if (destTime <= 0)
         {
+            metalHit.Play();
             Destroy(gameObject);
         }
     }
@@ -27,6 +31,12 @@ public class bulletDestroyer : MonoBehaviour {
         //debug = true;
         if (col.CompareTag("KillerWall") || col.CompareTag("Enemy") || col.CompareTag("Player") || col.CompareTag("Child"))
         {
+            metalHit.Play();
+            Destroy(gameObject);
+        }
+        else if (col.CompareTag("Melee"))
+        {
+            fleshHit.Play();
             Destroy(gameObject);
         }
     }
