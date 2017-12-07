@@ -22,6 +22,8 @@ public class playerHealth : MonoBehaviour {
 
     public Transform Explosion;
 
+    public AudioSource deathSound;
+
     // Use this for initialization
     void Start ()
     {
@@ -78,6 +80,7 @@ public class playerHealth : MonoBehaviour {
 
         if (hp <= 0)
         {
+            deathSound.Play();
             Instantiate(Explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
