@@ -6,6 +6,8 @@ public class bulletDestroyer : MonoBehaviour {
 
     private float destTime = 3;
 
+    public AudioSource onHit;
+
     // Use this for initialization
     void Start () {
 		
@@ -18,6 +20,7 @@ public class bulletDestroyer : MonoBehaviour {
 
         if (destTime <= 0)
         {
+            onHit.Play();
             Destroy(gameObject);
         }
     }
@@ -27,6 +30,7 @@ public class bulletDestroyer : MonoBehaviour {
         //debug = true;
         if (col.CompareTag("KillerWall") || col.CompareTag("Enemy") || col.CompareTag("Player") || col.CompareTag("Child"))
         {
+            onHit.Play();
             Destroy(gameObject);
         }
     }
