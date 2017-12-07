@@ -6,6 +6,8 @@ public class childDeath : MonoBehaviour {
 
     public GameObject parent;
 
+    private enemyHealth health;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -14,10 +16,7 @@ public class childDeath : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (parent == null)
-        {
-            Destroy(parent);
-        }
+
 
     }
 }
