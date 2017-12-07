@@ -5,7 +5,7 @@ using UnityEngine;
 public class doorTrigger : MonoBehaviour {
 
     bool isTrue = false;
-    public GameObject nextInLine;
+    //public GameObject nextInLine;
 
     private enemyHealth eHealth;
 
@@ -20,8 +20,9 @@ public class doorTrigger : MonoBehaviour {
     {
 	    if (isTrue == true)
         {
+            Debug.Log("Köh");
             gameObject.SetActive(false);
-            nextInLine.SetActive(true);
+            //nextInLine.SetActive(true);
         }
         if (eHealth.hp <= 0)    //Something else here
         {
