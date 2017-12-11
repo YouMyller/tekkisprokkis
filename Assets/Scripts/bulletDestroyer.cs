@@ -6,6 +6,7 @@ public class bulletDestroyer : MonoBehaviour {
 
     private float destTime = 3;
 
+
     public AudioSource metalHit;
     public AudioSource fleshHit;
 
@@ -21,7 +22,6 @@ public class bulletDestroyer : MonoBehaviour {
 
         if (destTime <= 0)
         {
-            metalHit.Play();
             Destroy(gameObject);
         }
     }
@@ -32,12 +32,14 @@ public class bulletDestroyer : MonoBehaviour {
         if (col.CompareTag("KillerWall") || col.CompareTag("Enemy") || col.CompareTag("Player") || col.CompareTag("Child"))
         {
             metalHit.Play();
-            Destroy(gameObject);
+            transform.position = new Vector3(99999,99999,99999);
+            Destroy(gameObject, metalHit.clip.length);
         }
         else if (col.CompareTag("Melee"))
         {
             fleshHit.Play();
-            Destroy(gameObject);
+            transform.position = new Vector3(99999, 99999, 99999);
+            Destroy(gameObject, fleshHit.clip.length);
         }
     }
 }
