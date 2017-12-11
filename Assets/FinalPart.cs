@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FinalPart : MonoBehaviour {
 
-    public float spawnTime = 5;
-    private bool spawner = false;
+    public float spawnTime = 10;
+    public bool spawner = false;
     public GameObject[] spawnedEnemies;
     public GameObject[] movedDoors;
 
@@ -21,22 +21,28 @@ public class FinalPart : MonoBehaviour {
         {
             spawnTime -= Time.deltaTime;
         }
-        if (spawnTime <= 4 && spawnTime >= 2)
+        if (spawnTime <= 8 && spawnTime >= 6)
         {
             spawnedEnemies[0].GetComponent<enemyMover>().enabled = true;
         }
-        if (spawnTime <= 2 && spawnTime >= 0)
+        if (spawnTime <= 6 && spawnTime >= 4)
         {
             spawnedEnemies[1].GetComponent<enemyMover>().enabled = true;
             movedDoors[0].GetComponent<moveDoor>().enabled = true;
         }
-        if (spawnTime <= 0)
+        if (spawnTime <= 4 && spawnTime >= 3)
         {
             spawnedEnemies[2].GetComponent<enemyMover>().enabled = true;
-            spawnedEnemies[3].GetComponent<enemyMover>().enabled = true;
-            spawnedEnemies[4].GetComponent<enemyMover>().enabled = true;
             movedDoors[1].GetComponent<moveDoor>().enabled = true;
+        }
+        if (spawnTime <= 4 && spawnTime >= 3)
+        {
+            spawnedEnemies[3].GetComponent<enemyMover>().enabled = true;
             movedDoors[2].GetComponent<moveDoor>().enabled = true;
+        }
+        if (spawnTime <= 2 && spawnTime >= 1)
+        {
+            spawnedEnemies[4].GetComponent<enemyMover>().enabled = true;
             movedDoors[3].GetComponent<moveDoor>().enabled = true;
             Destroy(gameObject);
         }

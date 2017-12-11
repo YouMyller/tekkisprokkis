@@ -95,7 +95,7 @@ public class playerHealth : MonoBehaviour {
             flashActive = true;
             flashCounter = flashLength;
         }
-        if (col.CompareTag("Child"))
+        if (col.CompareTag("Melee"))
         {
             Destroy(gameObject);
         }

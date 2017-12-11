@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0062740391dde7844bfa3e477be10679
-timeCreated: 1512594498
+timeCreated: 1512679025
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -68,7 +68,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 400
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -104,9 +104,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1260
-        width: 660
-        height: 660
+        y: 1285
+        width: 635
+        height: 635
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,10 +117,52 @@ TextureImporter:
       name: Death-Enemy-Melee_1
       rect:
         serializedVersion: 2
+        x: 635
+        y: 1285
+        width: 635
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Death-Enemy-Melee_2
+      rect:
+        serializedVersion: 2
         x: 0
-        y: 600
-        width: 660
-        height: 660
+        y: 650
+        width: 635
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Death-Enemy-Melee_3
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 650
+        width: 635
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Death-Enemy-Melee_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 635
+        height: 635
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
