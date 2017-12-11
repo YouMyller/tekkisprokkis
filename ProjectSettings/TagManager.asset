@@ -32,6 +32,7 @@ TagManager:
   - DownRightLeft Rail
   - LevelSwitcher
   - Melee
+  - Tank
   layers:
   - Default
   - TransparentFX
